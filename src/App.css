@@ -1,0 +1,157 @@
+.app {
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 40px 0; 
+  border-bottom: 1px solid #EAEAEA;
+}
+
+main {
+  padding-bottom: 30px;
+  flex-grow: 1; 
+  min-height: 50vh;
+}
+
+.center {
+  flex: 1;
+  max-width: 620px;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #444; 
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.description {
+  color: #444; 
+  font-size: 18px;
+  margin: 15px 0px;
+}
+
+.search {
+  height: 50px; 
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); 
+  border: 1px solid #EAEAEA;
+}
+
+.search-input {
+  height: 50px;
+  flex: 1;
+  padding: 0px 0px 0px 15px;
+  border: none;
+  font-size: 18px; 
+  outline: none;
+}
+
+.search-button {
+  height: 50px;
+  width: 50px;
+  background: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-left: 1px solid #EAEAEA;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.search-button:hover {
+  background: #D0D0D0; 
+}
+
+.search-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 40px;
+  align-items: flex-start; 
+}
+
+.options {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.options label {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.loading-spinner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #444;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: smooth-spin 0.6s linear infinite; 
+}
+
+@keyframes smooth-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 620px) {
+    .center {
+        max-width: 100%; 
+        padding: 0 15px; 
+    }
+    .options {
+        margin-bottom: 15px;
+    }
+    .options label {
+        display: block; 
+        margin: 8px 0; 
+    }
+    .search {
+        height: 44px; 
+    }
+    .search-input {
+        height: 44px;
+        font-size: 16px;
+    }
+    .search-button {
+        height: 44px;
+        width: 44px;
+    }
+    .search-icon {
+        height: 24px;
+        width: 24px;
+    }
+    .results {
+        padding-top: 20px;
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
